@@ -27,6 +27,11 @@ class RegistrationSerializer(ModelSerializer):
 
 
 class UserProfileSerializer(ModelSerializer):
+    """
+    Serializer for user registration. It defines the necessary fields
+    and provides a method get or put user information.
+    """
+
     class Meta:
         model = RegisteredUser
         fields = ["email", "phone", "first_name", "second_name"]

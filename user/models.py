@@ -12,6 +12,7 @@ class UserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
         """
         Create and save a user with the given email and password.
+        We can change the fields as needed for a business task.
         """
         if not email:
             raise ValueError("The Email must be set")
@@ -36,6 +37,11 @@ class UserManager(BaseUserManager):
 
 
 class RegisteredUser(AbstractBaseUser, PermissionsMixin):
+    """
+    The user model along with their profile data.
+    If necessary, you can change to suit the business task.
+    """
+
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=25, unique=True, null=True, blank=True)
     first_name = models.CharField(max_length=30, null=True, blank=True)
