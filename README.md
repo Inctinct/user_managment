@@ -27,4 +27,8 @@ The user can also delete his account.
   3. api/login - email and phone. In response access and refresh tokens (POST)
   4. api/proile - GET for profile information, PUT for update profile information, DELETE for delete user account
               
-   
+
+For self-deployment of the application on Render (Heroku may be) it is necessary:
+  1. create a web service on the site by connecting the repository
+  2. Have a database on shared hosting
+  3. In terms of the environment, specify: PYTHON_VERSION: 3.9.9 (Render), SECRET_KEY: some_key(on render can generate), DEBUG: 1/0, ALLOWED_HOSTS: *, DATABASE_URL: <your_internal_database_url>
