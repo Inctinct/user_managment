@@ -26,6 +26,8 @@ The user can also delete his account.
   1. api/register - registration with email and password, optional phone, first_name, second_name (POST)
   3. api/login - email and phone. In response access and refresh tokens (POST)
   4. api/proile - GET for profile information, PUT for update profile information, DELETE for delete user account
+  5. and some more endpoints that come out of the box with simple_jwt(https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
+  
               
 
 For self-deployment of the application on Render (Heroku may be) it is necessary:
